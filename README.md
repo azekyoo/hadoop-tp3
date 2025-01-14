@@ -19,15 +19,26 @@ hdfs dfs -put /data/relationships/data.txt /relationships/
 ```bash
 hadoop jar /jars/hadoop-tp3-collaborativeFiltering-job1-1.0.jar /data/relationships/data.txt /output/job1
 ```
-
+Résultats:
+```bash
+hdfs dfs -cat /output/job1/part-r-00001
+```
 # Job 2 - [.jar](jars/hadoop-tp3-collaborativeFiltering-job2-1.0.jar)
 
 ```bash
 hadoop jar /jars/hadoop-tp3-collaborativeFiltering-job2-1.0.jar /output/job1 /output/job2
+```
+Résultats:
+```bash
+hdfs dfs -cat /output/job2/part-r-00001
 ```
 
 # Job 3 - [.jar](jars/hadoop-tp3-collaborativeFiltering-job3-1.0.jar)
 
 ```bash
 hadoop jar /jars/hadoop-tp3-collaborativeFiltering-job3-1.0.jar /output/job2 /output/job3
+```
+Résultats:
+```bash
+hdfs dfs -cat /output/job3/part-r-00001
 ```
